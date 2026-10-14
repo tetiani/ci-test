@@ -1,0 +1,14 @@
+name: Tests
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install pytest
+        run: pip install pytest
+      - name: Run tests
+        run: pytest
